@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OCR ID Demo</title>
+    <style>
+      #videoContainer {
+        width: 100%;
+        max-width: 640px;
+        height: 480px;
+        margin: auto;
+        border: 2px solid #ccc;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #controls {
+        margin-top: 20px;
+        text-align: center;
+      }
+      #result {
+        margin-top: 20px;
+        padding: 10px;
+        background: #f7f7f7;
+        border: 1px solid #ccc;
+        white-space: pre-wrap;
+        font-family: monospace;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>OCR ID Demo</h1>
+    <div id="tokenInputContainer">
+      <label for="tokenInput">Gestok Token:</label>
+      <input type="text" id="tokenInput" placeholder="Ingresa tu token" />
+      <button id="initializeButton">Inicializar OCR</button>
+    </div>
+    <div id="status">Estado: Inactivo</div>
+    <div id="videoContainer"></div>
+    <div id="controls" style="display:none">
+      <button id="startButton">Iniciar</button>
+      <button id="restartButton">Reiniciar</button>
+    </div>
+    <div id="result"></div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
