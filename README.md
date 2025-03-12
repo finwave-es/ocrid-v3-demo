@@ -1,4 +1,4 @@
-# OCRID-V3 Demo 🎯
+# fw-ocrid Demo 🎯
 
 This repository is an example implementation of the `fw-ocrid` component, developed with **Vite.js** and **TypeScript**.
 
