@@ -4,45 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>OCR ID Demo</title>
-    <style>
-      #videoContainer {
-        width: 100%;
-        max-width: 640px;
-        height: 480px;
-        margin: auto;
-        border: 2px solid #ccc;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      #controls {
-        margin-top: 20px;
-        text-align: center;
-      }
-      #result {
-        margin-top: 20px;
-        padding: 10px;
-        background: #f7f7f7;
-        border: 1px solid #ccc;
-        white-space: pre-wrap;
-        font-family: monospace;
-      }
-    </style>
+    <link rel="stylesheet" href="/src/style.css">
   </head>
   <body>
-    <h1>OCRID V3 Demo</h1>
-    <div id="tokenInputContainer">
-      <label for="tokenInput">Finwave Product Token:</label>
-      <input type="text" id="tokenInput" placeholder="Enter your token here" />
-      <button id="initializeButton">Initialize OCR</button>
+    <div id="app">
+      <h1>OCRID Component Demo</h1>
+      
+      <div id="tokenInputContainer">
+        <label for="tokenInput">Finwave Product Token:</label>
+        <input type="text" id="tokenInput" placeholder="Enter your token here" />
+        <button id="initializeButton">Initialize OCR</button>
+      </div>
+      
+      <div id="status">Status: Inactive</div>
+      
+      <div class="ocr_box">
+        <div class="ocr_title">
+          <p class="blink"><span></span></p>
+        </div>
+        <div class="ocr_content">
+          <div id="videoContainer" class="videoContainer"></div>
+        </div>
+      </div>
+      
+      <div id="controls" style="display:none">
+        <button id="startButton" class="button_on">Comenzar</button>
+        <button id="restartButton">Restart</button>
+      </div>
+      
+      <div id="result"></div>
     </div>
-    <div id="status">Satus: Inactive</div>
-    <div id="videoContainer"></div>
-    <div id="controls" style="display:none">
-      <button id="startButton">Start</button>
-      <button id="restartButton">Restart</button>
-    </div>
-    <div id="result"></div>
 
     <script type="module" src="/src/main.ts"></script>
   </body>
